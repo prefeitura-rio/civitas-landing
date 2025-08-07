@@ -2033,8 +2033,9 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 .numeros-civitas .features-list {
-  padding-bottom: 20rem;
+  padding-bottom: 5rem;
 }
+
 
 .about-features .feature {
   margin-bottom: 1.8rem;
