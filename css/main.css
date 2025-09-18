@@ -71,7 +71,7 @@ body {
   font-family: "muli-regular", sans-serif;
   font-size: 1.6rem;
   line-height: 1.875;
-  color: #767676;
+  color: rgb(55, 55, 55);
   margin: 0;
   padding: 0;
 }
@@ -160,7 +160,7 @@ p.lead {
   font-family: "muli-light", sans-serif;
   font-size: 2.1rem;
   line-height: 1.857;
-  color: #838383;
+  color:rgb(55, 55, 55);
 
 }
 
@@ -226,7 +226,7 @@ blockquote cite:before {
 
 blockquote cite a,
 blockquote cite a:visited {
-  color: #838383;
+  color: rgb(55, 55, 55);
   border: none;
 }
 
@@ -235,7 +235,7 @@ abbr {
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: .05rem;
-  color: #838383;
+  color: rgb(55, 55, 55);
 }
 
 var, kbd, samp, code, pre {
@@ -761,25 +761,25 @@ label>input[type="radio"] {
  * ------------------------------------------------------------------- */
 
 ::-webkit-input-placeholder {
-  color: #838383;
+  color: rgb(55, 55, 55);
 }
 
 :-moz-placeholder {
-  color: #838383;
+  color: rgb(55, 55, 55);
   /* Firefox 18- */
 }
 
 ::-moz-placeholder {
-  color: #838383;
+  color: rgb(55, 55, 55);
   /* Firefox 19+ */
 }
 
 :-ms-input-placeholder {
-  color: #838383;
+  color: rgb(55, 55, 55);
 }
 
 .placeholder {
-  color: #838383 !important;
+  color: rgb(55, 55, 55) !important;
 }
 
 
@@ -2016,7 +2016,11 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   padding-bottom: 10rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
-#about-intro-2 {
+.about-intro-6 {
+  padding-bottom: 10rem;
+
+}
+#about-intro-2, #about-intro-3, #about-intro-4, #about-intro-5, #about-intro-6 {
   padding-top: 10rem;
 }
 #eixos-atuacao {
