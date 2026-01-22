@@ -1237,10 +1237,10 @@ h1.intro-header::before {
   padding: 0;
   outline: 0;
   border: none;
-  width: 115px;
+  width: 156px;
   height: 30px;
   background: url("../images/civitas_icon.png") no-repeat center;
-  background-size: 105px 30px;
+  background-size: contain;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -2814,10 +2814,10 @@ footer ul a:visited {
   padding: 0;
   outline: 0;
   border: none;
-  width: 115px;
+  width: 156px;
   height: 30px;
   background: url("../images/civitas_icon.png") no-repeat center;
-  background-size: 105px 30px;
+  background-size: contain;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
