@@ -900,6 +900,12 @@ button.disque_denuncia.stroke,
   color: #a5a5a5 !important;
 }
 
+.button.cor.stroke,
+.button.cor.stroke {
+  background: white !important;
+  color: #a5a5a5 !important;
+}
+
 button.stroke:hover,
 .button.stroke:hover {
   border: 0.3rem solid #00BFFF;
