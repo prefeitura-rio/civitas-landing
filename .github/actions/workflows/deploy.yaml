@@ -1,0 +1,39 @@
+name: Deploy Docker image to Production
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - css/**
+      - fonts/**
+      - images/**
+      - js/**
+      - favicon.ico
+      - index.html
+      - styles.html
+      - nginx.conf
+      - Dockerfile
+      - k8s/**
+
+jobs:
+  build:
+    name: Build Docker image for Production
+    runs-on: ubuntu-latest
+    environment: prod
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Build and push Docker image for Production
+        uses: ./.github/actions/docker-build
+        with:
+          working-directory: .
+          image-tag: prod
+          github-token: ${{ secrets.GITHUB_TOKEN }}
