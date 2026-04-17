@@ -1243,8 +1243,8 @@ h1.intro-header::before {
   padding: 0;
   outline: 0;
   border: none;
-  width: 156px;
-  height: 30px;
+  width: 200px;
+  height: 42px;
   background: url("../images/civitas_icon.png") no-repeat center;
   background-size: contain;
   font: 0/0 a;
@@ -1272,10 +1272,10 @@ h1.intro-header::before {
   padding: 0;
   outline: 0;
   border: none;
-  width: 70px;
-  height: 35px;
+  width: 82px;
+  height: 41px;
   background: url("../images/prefeitura_icon.png") no-repeat center; /* Replace with your icon */
-  background-size: 70px 35px;
+  background-size: 82px 41px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -1301,10 +1301,10 @@ h1.intro-header::before {
   padding: 0;
   outline: 0;
   border: none;
-  width: 105px;
-  height: 45px;
+  width: 116px;
+  height: 53px;
   background: url("../images/logo_disque_denuncia_branco.png") no-repeat center;
-  background-size: 105px 45px;
+  background-size: 116px 53px;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
@@ -1499,9 +1499,19 @@ padding-top:150px;
 
 @media only screen and (max-width: 768px) {
   .header-logo a {
-    width: 88px;
-    height: 20px;
-    background-size: 88px 20px;
+    width: 112px;
+    height: 24px;
+    background-size: 112px 24px;
+  }
+  .header-middle a {
+    width: 72px;
+    height: 36px;
+    background-size: 72px 36px;
+  }
+  .header-right a {
+    width: 106px;
+    height: 48px;
+    background-size: 106px 48px;
   }
   #header-nav-wrap {
     display: none;
@@ -2014,7 +2024,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #about {
   min-height: 786px;
   background: #ffffff;
-  padding-top: 18rem;
+  padding-top: 12rem;
   overflow: hidden;
 }
 
@@ -2056,6 +2066,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   display: inline-block;
 }
 
+.about-features .features-list.owl-carousel .feature .icon img.icon-window {
+  width: 58px;
+  height: auto;
+}
+
+.about-features .features-list.owl-carousel .feature .icon img.handshake-icon {
+  width: 56.26px;
+  height: 39px;
+  object-fit: contain;
+  display: block;
+}
+
 .about-features .feature .icon i {
   color: #00BFFF;
   font-size: 4.8rem;
@@ -2064,8 +2086,45 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .about-features .feature h3 {
   font-family: "montserrat-regular", sans-serif;
   font-size: 1.9rem;
+  line-height: 1.35;
   color: #151515;
   margin-bottom: 3rem;
+  min-height: 5.6rem;
+}
+
+.about-features .features-list.owl-carousel .feature {
+  margin-bottom: 0;
+}
+
+.about-features .features-list.owl-carousel .owl-dots {
+  margin-top: 3rem;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-features .features-list.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  display: inline;
+}
+
+.about-features .features-list.owl-carousel .owl-dots .owl-dot span {
+  width: 9px;
+  height: 9px;
+  background-color: #959595;
+  margin: 9px 9px;
+  display: block;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.about-features .features-list.owl-carousel .owl-dots .owl-dot.active span,
+.about-features .features-list.owl-carousel .owl-dots .owl-dot:hover span {
+  background-color: #00BFFF;
 }
 
 .about-how {
@@ -2206,11 +2265,19 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 @media only screen and (max-width: 768px) {
+  .about-features .features-list.owl-carousel .feature .icon img.icon-window {
+    width: 48px;
+  }
+  .about-features .features-list.owl-carousel .feature .icon img.handshake-icon {
+    width: 46.56px;
+    height: 32px;
+  }
   .about-features .feature .icon i {
     font-size: 4.4rem;
   }
   .about-features .feature h3 {
     font-size: 1.8rem;
+    min-height: 5.2rem;
   }
   .about-how h3 {
     font-size: 1.9rem;
@@ -2236,6 +2303,14 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
     max-width: 600px;
     text-align: center;
   }
+  .about-features .features-list.owl-carousel .feature {
+    width: 100% !important;
+    float: none !important;
+    clear: none !important;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
   .about-features .feature {
     width: 100% !important;
     float: none !important;
@@ -2246,6 +2321,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   }
   .about-features .feature h3 {
     margin-bottom: 1.5rem;
+    min-height: 4.8rem;
   }
 }
 
@@ -2601,7 +2677,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #testimonial-slider .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 
 #testimonial-slider .owl-dots .owl-dot span {
@@ -2636,9 +2712,17 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 .video-container{
-  max-width: 800px;
-  margin:0 auto;
-  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  padding: 0;
+  margin-bottom: 10rem;
+}
+
+.video-container video{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
 }
 
 @media only screen and (max-width: 768px) {
