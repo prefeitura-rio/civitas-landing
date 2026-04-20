@@ -102,11 +102,11 @@
 							items: 1,
 							stagePadding: 0
 						},
-						650: {
+						900: {
 							items: 2,
-							stagePadding: 24
+							stagePadding: 0
 						},
-						1025: {
+						1280: {
 							items: 3,
 							stagePadding: 72
 						}

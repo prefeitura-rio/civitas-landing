@@ -2092,27 +2092,40 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   min-height: 5.6rem;
 }
 
+.about-features .service-content p {
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 .about-features .features-list.owl-carousel .feature {
   margin-bottom: 0;
 }
 
 .about-features .features-list.owl-carousel .owl-dots {
+  width: 100%;
   margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
 
 .about-features .features-list.owl-carousel .owl-dots .owl-dot {
-  display: inline-block;
+  display: block;
   zoom: 1;
-  display: inline;
 }
 
 .about-features .features-list.owl-carousel .owl-dots .owl-dot span {
   width: 9px;
   height: 9px;
   background-color: #959595;
-  margin: 9px 9px;
+  margin: 0;
   display: block;
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
@@ -2125,6 +2138,17 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .about-features .features-list.owl-carousel .owl-dots .owl-dot.active span,
 .about-features .features-list.owl-carousel .owl-dots .owl-dot:hover span {
   background-color: #00BFFF;
+}
+
+.about-features .features-carousel-hint {
+  display: block;
+  margin-top: 1.4rem;
+  text-align: center;
+  font-family: "montserrat-medium", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(21, 21, 21, 0.6);
+  letter-spacing: 0.04em;
 }
 
 .about-how {
