@@ -79,42 +79,13 @@
   /* Owl Carousel
 	* ------------------------------------------------------ */
 	var ssOwlCarousel = function() {
-
-		$(".owl-carousel").each(function() {
-			var $slider = $(this);
-			var options = {
-				loop: true,
-				nav: false,
-				autoHeight: true,
-				items: 1
-			};
-
-			if ($slider.hasClass("eixos-carousel")) {
-				options = {
-					loop: false,
-					nav: false,
-					dots: true,
-					margin: 24,
-					autoHeight: true,
-					slideBy: 1,
-					responsive: {
-						0: {
-							items: 1,
-							stagePadding: 0
-						},
-						900: {
-							items: 2,
-							stagePadding: 0
-						},
-						1280: {
-							items: 3,
-							stagePadding: 72
-						}
-					}
-				};
-			}
-
-			$slider.owlCarousel(options);
+			
+		$(".owl-carousel").owlCarousel({	
+	      loop: true,
+  			nav: false,
+			autoHeight: true,
+  			items: 1
+	
 		});
 
 	};  	
