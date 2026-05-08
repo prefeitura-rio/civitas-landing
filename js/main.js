@@ -79,12 +79,13 @@
   /* Owl Carousel
 	* ------------------------------------------------------ */
 	var ssOwlCarousel = function() {
-
+			
 		$(".owl-carousel").owlCarousel({	
 	      loop: true,
   			nav: false,
 			autoHeight: true,
   			items: 1
+	
 		});
 
 	};  	
