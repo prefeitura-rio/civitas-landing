@@ -48,3 +48,5 @@ helmCharts:
       argoImageUpdater:
         enabled: true
         updateStrategy: "digest"
+        applicationRef:
+          namePattern: "landing-page"
