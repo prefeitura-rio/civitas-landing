@@ -2039,19 +2039,136 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 #about-intro-2, #about-intro-3, #about-intro-4, #about-intro-5, #about-intro-6 {
   padding-top: 10rem;
 }
-#eixos-atuacao {
+#eixos-atuacao.eixos-header {
   padding-top: 10rem;
-  margin-bottom: -10rem;
+  margin-bottom: -7rem;
   text-align: left;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
-.about-features .features-list {
+.eixos-nav {
+  display: flex;
+  gap: 1.2rem;
+  padding-top: .5rem;
+  margin-left: auto;
+  margin-right: -2.2rem;
+}
+
+.eixos-nav-button {
+  width: 4rem;
+  height: 4rem;
+  min-width: 4rem;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #d7e0e6;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #9facb5;
+  line-height: 4rem;
+  text-align: center;
+  transition: all .25s ease-in-out;
+}
+
+.eixos-nav-button:hover,
+.eixos-nav-button:focus,
+.eixos-nav-button.is-active {
+  border-color: #00BFFF;
+  background: #00BFFF;
+  color: #ffffff;
+}
+
+.eixos-nav-button.is-disabled,
+.eixos-nav-button:disabled,
+.eixos-nav-button.is-disabled:hover,
+.eixos-nav-button:disabled:hover,
+.eixos-nav-button.is-disabled:focus,
+.eixos-nav-button:disabled:focus {
+  border-color: #d7e0e6;
+  background: #ffffff;
+  color: #c5cfd6;
+  cursor: default;
+}
+
+.eixos-nav-button i {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.about-features:not(.eixos-carousel-section) .features-list {
   padding-top: 10rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 6rem;
   row-gap: 5rem;
   align-items: start;
+}
+
+.eixos-carousel-section {
+  padding-bottom: 10rem;
+}
+
+.eixos-carousel-section .col-twelve {
+  float: none;
+}
+
+.about-features .eixos-carousel {
+  padding-top: 10rem;
+  display: block;
+}
+
+.eixos-carousel .owl-stage {
+  display: flex;
+}
+
+.eixos-carousel .owl-item {
+  display: flex;
+}
+
+.eixos-carousel .feature {
+  width: 100%;
+}
+
+.eixos-carousel .owl-dots {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.eixos-carousel .owl-dot {
+  display: inline-block;
+  width: .7rem;
+  height: .7rem;
+  margin: 0 .35rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #cfd7dd;
+  min-width: 0;
+  line-height: 1;
+  transition: all .25s ease-in-out;
+  vertical-align: middle;
+}
+
+.eixos-carousel .owl-dot.active {
+  width: 3rem;
+  background: #00BFFF;
+}
+
+.eixos-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 1.2rem;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.3rem;
+  color: #008fd4;
+}
+
+.eixos-link:hover,
+.eixos-link:focus {
+  color: #00BFFF;
 }
 
 .numeros-civitas .features-list {
@@ -2067,11 +2184,17 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .about-features .feature .icon {
   margin-bottom: 1.5rem;
   display: inline-block;
+  height: 58px;
 }
 
 .about-features .features-list .feature .icon img.icon-window {
   width: 58px;
   height: auto;
+}
+
+.about-features .features-list .feature .icon img.icon-cpid {
+  width: 42px;
+  margin-top: .6rem;
 }
 
 .about-features .feature .icon i {
@@ -2085,7 +2208,8 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   line-height: 1.35;
   color: #151515;
   margin-bottom: 3rem;
-  min-height: 5.6rem;
+  min-height: 7.8rem;
+  max-width: 30rem;
 }
 
 .about-features .service-content p {
@@ -2095,6 +2219,263 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  #eixos-atuacao.eixos-header {
+    display: block;
+    margin-bottom: -8rem;
+  }
+
+  .eixos-nav {
+    justify-content: flex-end;
+    margin-top: -1rem;
+  }
+}
+
+/* CPID detail page */
+.cpid-page {
+  background: #202020;
+  color: #151515;
+}
+
+.cpid-page .cpid-shell {
+  width: min(1180px, calc(100% - 6rem));
+  margin: 0 auto;
+}
+
+.cpid-hero {
+  min-height: 42rem;
+  padding-top: 7.2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .88) 24%, rgba(0, 0, 0, .55) 58%, rgba(0, 0, 0, .2) 100%), url("../images/capa_civitas.png") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.cpid-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  margin-top: 3rem;
+  color: #ffffff;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.2rem;
+}
+
+.cpid-back:hover,
+.cpid-back:focus {
+  color: #00BFFF;
+}
+
+.cpid-hero-content {
+  padding-top: 4rem;
+  padding-left: 3rem;
+}
+
+.cpid-hero-content p {
+  margin-bottom: 2.2rem;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: .22rem;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.cpid-hero-content p span {
+  color: #00BFFF;
+}
+
+.cpid-hero-content h1 {
+  max-width: 66rem;
+  color: #ffffff;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 4.4rem;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.cpid-scroll {
+  float: right;
+  margin-top: 6.5rem;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.cpid-content {
+  background: #ffffff;
+  padding: 8.5rem 0 10rem;
+}
+
+.cpid-content hr {
+  border: 0;
+  border-top: 1px solid #e8edf1;
+  margin: 7.5rem 0;
+}
+
+.cpid-section-grid {
+  display: grid;
+  grid-template-columns: 31rem 1fr;
+  gap: 7rem;
+}
+
+.cpid-page h2 {
+  margin: 0 0 2.4rem;
+  color: #171717;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 2.9rem;
+  line-height: 1.2;
+}
+
+.cpid-rule {
+  display: block;
+  width: 5.8rem;
+  height: 2px;
+  background: #00BFFF;
+}
+
+.cpid-intro p,
+.cpid-steps,
+.cpid-card p {
+  color: #53606d;
+  font-size: 1.55rem;
+  line-height: 1.9;
+}
+
+.cpid-how-grid {
+  display: grid;
+  grid-template-columns: minmax(28rem, 38rem) 1fr;
+  gap: 7rem;
+  align-items: center;
+  margin-top: 4.5rem;
+}
+
+.cpid-how-grid img {
+  width: 100%;
+  border-radius: 1.4rem;
+  display: block;
+}
+
+.cpid-steps {
+  list-style: none;
+  margin: 0;
+}
+
+.cpid-steps li {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+  padding-left: 0;
+}
+
+.cpid-steps li:last-child {
+  margin-bottom: 0;
+}
+
+.cpid-steps span {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 3.2rem;
+  background: #eaf0f5;
+  color: #0d3157;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.1rem;
+}
+
+.cpid-structure .cpid-rule {
+  margin-bottom: 7rem;
+}
+
+.cpid-cards {
+  display: grid;
+  grid-template-columns: minmax(24rem, 36rem) auto minmax(24rem, 36rem);
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.cpid-card {
+  min-height: 22rem;
+  border: 1px solid #dce5ed;
+  border-radius: 1.2rem;
+  padding: 2.8rem 3rem 3rem;
+}
+
+.cpid-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: #001f42;
+  color: #ffffff;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
+.cpid-card img {
+  width: 2.8rem;
+  display: block;
+  margin-top: 2.6rem;
+  margin-bottom: -2.8rem;
+}
+
+.cpid-card h3 {
+  margin: 0 0 2.2rem 4rem;
+  color: #111111;
+  font-family: "montserrat-bold", sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.4;
+}
+
+.cpid-card p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.cpid-card p strong {
+  color: #111111;
+  font-family: "montserrat-bold", sans-serif;
+}
+
+.cpid-card-separator {
+  color: #0d3157;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+@media only screen and (max-width: 900px) {
+  .cpid-section-grid,
+  .cpid-how-grid,
+  .cpid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .cpid-card-separator {
+    display: none;
+  }
+
+  .cpid-hero-content {
+    padding-left: 0;
+  }
+
+  .cpid-hero-content h1 {
+    font-size: 3.4rem;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .cpid-page .cpid-shell {
+    width: min(100% - 3.2rem, 1180px);
+  }
+
+  .cpid-hero-content h1 {
+    font-size: 2.8rem;
+  }
 }
 
 .about-how {
