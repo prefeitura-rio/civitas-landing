@@ -2245,25 +2245,28 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 .cpid-hero {
-  min-height: 42rem;
+  min-height: 48rem;
   padding-top: 7.2rem;
-  background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .88) 24%, rgba(0, 0, 0, .55) 58%, rgba(0, 0, 0, .2) 100%), url("../images/capa_civitas.png") center/cover no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .88) 24%, rgba(0, 0, 0, .55) 58%, rgba(0, 0, 0, .2) 100%), url("../images/capa_civitas.png") center 35%/cover no-repeat;
   color: #ffffff;
 }
 
-.cpid-back {
+.cpid-page .cpid-back,
+.cpid-page .cpid-back:visited {
   display: inline-flex;
   align-items: center;
   gap: .8rem;
   margin-top: 3rem;
-  color: #ffffff;
+  color: #d9f6ff;
   font-family: "montserrat-regular", sans-serif;
   font-size: 1.2rem;
+  -webkit-text-fill-color: #d9f6ff;
 }
 
-.cpid-back:hover,
-.cpid-back:focus {
-  color: #00BFFF;
+.cpid-page .cpid-back:hover,
+.cpid-page .cpid-back:focus {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
 .cpid-hero-content {
@@ -2273,7 +2276,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 .cpid-hero-content p {
   margin-bottom: 2.2rem;
-  font-family: "montserrat-bold", sans-serif;
+  font-family: "montserrat-regular", sans-serif;
   font-size: 1.2rem;
   letter-spacing: .22rem;
   text-transform: uppercase;
@@ -2287,7 +2290,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-hero-content h1 {
   max-width: 66rem;
   color: #ffffff;
-  font-family: "montserrat-bold", sans-serif;
+  font-family: "montserrat-regular", sans-serif;
   font-size: 4.4rem;
   line-height: 1.18;
   margin: 0;
@@ -2320,7 +2323,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-page h2 {
   margin: 0 0 2.4rem;
   color: #171717;
-  font-family: "montserrat-bold", sans-serif;
+  font-family: "montserrat-regular", sans-serif;
   font-size: 2.9rem;
   line-height: 1.2;
 }
@@ -2336,6 +2339,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-steps,
 .cpid-card p {
   color: #53606d;
+  font-family: "muli-light", sans-serif;
   font-size: 1.55rem;
   line-height: 1.9;
 }
@@ -2348,10 +2352,15 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin-top: 4.5rem;
 }
 
+.cpid-section-heading {
+  margin-bottom: 4.5rem;
+}
+
 .cpid-how-grid img {
   width: 100%;
-  border-radius: 1.4rem;
+  border-radius: 1.8rem;
   display: block;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
 
 .cpid-steps {
@@ -2365,6 +2374,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   gap: 1.8rem;
   margin-bottom: 4rem;
   padding-left: 0;
+  color: #4f5a66;
 }
 
 .cpid-steps li:last-child {
@@ -2379,10 +2389,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   align-items: center;
   justify-content: center;
   flex: 0 0 3.2rem;
-  background: #eaf0f5;
-  color: #0d3157;
-  font-family: "montserrat-bold", sans-serif;
+  background: #eef3f8;
+  color: #0f335a;
+  font-family: "montserrat-regular", sans-serif;
   font-size: 1.1rem;
+}
+
+.cpid-how .intro-header {
+  margin-bottom: 2.2rem;
+}
+
+.cpid-how .cpid-rule {
+  margin-bottom: 0;
 }
 
 .cpid-structure .cpid-rule {
@@ -2391,17 +2409,18 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 .cpid-cards {
   display: grid;
-  grid-template-columns: minmax(24rem, 36rem) auto minmax(24rem, 36rem);
+  grid-template-columns: minmax(24rem, 37rem) 3rem minmax(24rem, 37rem);
   align-items: center;
-  justify-content: space-between;
-  gap: 5rem;
+  justify-content: center;
+  gap: 13.8rem;
 }
 
 .cpid-card {
-  min-height: 22rem;
+  min-height: 18rem;
   border: 1px solid #dce5ed;
   border-radius: 1.2rem;
-  padding: 2.8rem 3rem 3rem;
+  padding: 2.1rem 2.3rem 2.3rem;
+  width: 100%;
 }
 
 .cpid-badge {
@@ -2418,34 +2437,50 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 }
 
 .cpid-card img {
-  width: 2.8rem;
+  width: 2.4rem;
   display: block;
-  margin-top: 2.6rem;
-  margin-bottom: -2.8rem;
+  margin-top: 1.9rem;
+  margin-bottom: -2.3rem;
 }
 
 .cpid-card h3 {
-  margin: 0 0 2.2rem 4rem;
+  margin: 0 0 1.7rem 3.3rem;
   color: #111111;
-  font-family: "montserrat-bold", sans-serif;
-  font-size: 1.55rem;
+  font-family: "montserrat-regular", sans-serif;
+  font-size: 1.4rem;
   line-height: 1.4;
 }
 
 .cpid-card p {
   margin: 0;
-  line-height: 1.55;
+  color: rgb(55, 55, 55);
+  font-family: "muli-light", sans-serif;
+  font-size: 1.55rem;
+  line-height: 1.6;
+  max-width: 28rem;
 }
 
 .cpid-card p strong {
-  color: #111111;
-  font-family: "montserrat-bold", sans-serif;
+  color: inherit;
+  font-family: "muli-bold", sans-serif;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .cpid-card-separator {
   color: #0d3157;
   font-size: 2rem;
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+  justify-content: center;
+}
+
+.cpid-card-dots {
+  position: relative;
+  top: -0.18em;
+  letter-spacing: -.15rem;
 }
 
 @media only screen and (max-width: 900px) {
@@ -2466,6 +2501,16 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .cpid-hero-content h1 {
     font-size: 3.4rem;
   }
+
+  .cpid-hero {
+    min-height: 60rem;
+    background-position: center 30%;
+  }
+
+  .cpid-how-grid {
+    gap: 3rem;
+    margin-top: 3rem;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -2475,6 +2520,20 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
   .cpid-hero-content h1 {
     font-size: 2.8rem;
+  }
+
+  .cpid-hero {
+    min-height: 40rem;
+    background-position: center 25%;
+  }
+
+  .cpid-how .intro-header {
+    font-size: 2.2rem;
+  }
+
+  .cpid-steps li {
+    gap: 1.2rem;
+    margin-bottom: 2.6rem;
   }
 }
 
