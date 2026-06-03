@@ -2242,11 +2242,13 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-page .cpid-shell {
   width: min(1180px, calc(100% - 6rem));
   margin: 0 auto;
+  position: relative;
 }
 
 .cpid-hero {
   min-height: 48rem;
   padding-top: 7.2rem;
+  position: relative;
   background: linear-gradient(90deg, rgba(0, 0, 0, .96) 0%, rgba(0, 0, 0, .88) 24%, rgba(0, 0, 0, .55) 58%, rgba(0, 0, 0, .2) 100%), url("../images/capa_civitas.png") center 35%/cover no-repeat;
   color: #ffffff;
 }
@@ -2296,11 +2298,31 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin: 0;
 }
 
+.cpid-scrolldown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  z-index: 5;
+}
+
 .cpid-scroll {
-  float: right;
-  margin-top: 6.5rem;
-  color: #ffffff;
-  font-size: 1.8rem;
+  top: 36px;
+  color: #ffffff !important;
+}
+
+.cpid-scroll i {
+  padding-left: 9px;
+}
+
+.cpid-scroll:hover,
+.cpid-scroll:focus {
+  color: #00BFFF !important;
 }
 
 .cpid-content {
@@ -2505,6 +2527,10 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   .cpid-hero {
     min-height: 60rem;
     background-position: center 30%;
+  }
+
+  .cpid-scrolldown {
+    display: none;
   }
 
   .cpid-how-grid {
@@ -3250,6 +3276,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  * ------------------------------------------------------------------- */
 
 footer {
+  background: #141515;
   padding-top: 9rem;
   padding-bottom: 4.2rem;
   font-size: 1.5rem;
