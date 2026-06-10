@@ -2063,10 +2063,10 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   min-width: 4rem;
   padding: 0;
   margin: 0;
-  border: 1px solid #d7e0e6;
+  border: 1px solid #272727;
   border-radius: 50%;
   background: #ffffff;
-  color: #9facb5;
+  color: #272727;
   line-height: 4rem;
   text-align: center;
   transition: all .25s ease-in-out;
