@@ -2368,8 +2368,8 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 
 .cpid-how-grid {
   display: grid;
-  grid-template-columns: minmax(28rem, 38rem) 1fr;
-  gap: 7rem;
+  grid-template-columns: minmax(34rem, 46rem) 1fr;
+  gap: 5rem;
   align-items: center;
   margin-top: 4.5rem;
 }
@@ -2388,6 +2388,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-steps {
   list-style: none;
   margin: 0;
+  margin-left: 3.5rem;
 }
 
 .cpid-steps li {
@@ -2397,6 +2398,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   margin-bottom: 4rem;
   padding-left: 0;
   color: #4f5a66;
+  font-size: 1.8rem;
 }
 
 .cpid-steps li:last-child {
@@ -2432,7 +2434,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
 .cpid-cards {
   display: grid;
   grid-template-columns: minmax(24rem, 37rem) 3rem minmax(24rem, 37rem);
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 13.8rem;
 }
@@ -2443,11 +2445,16 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   border-radius: 1.2rem;
   padding: 2.1rem 2.3rem 2.3rem;
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .cpid-badge {
   display: inline-flex;
   align-items: center;
+  align-self: flex-start;
   height: 2rem;
   padding: 0 1rem;
   border-radius: 999px;
@@ -2480,6 +2487,10 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   font-size: 1.55rem;
   line-height: 1.6;
   max-width: 28rem;
+  text-wrap: pretty;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 .cpid-card p strong {
@@ -2497,12 +2508,14 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
   align-items: center;
   gap: .2rem;
   justify-content: center;
+  align-self: center;
 }
 
 .cpid-card-dots {
   position: relative;
-  top: -0.18em;
-  letter-spacing: -.15rem;
+  width: 7.2rem;
+  height: 7.2rem;
+  top: 0;
 }
 
 @media only screen and (max-width: 900px) {
@@ -3276,7 +3289,7 @@ html[data-useragent*='MSIE 10.0'] .home-scrolldown,
  * ------------------------------------------------------------------- */
 
 footer {
-  background: #141515;
+  background: var(--color-black-solid, #000);
   padding-top: 9rem;
   padding-bottom: 4.2rem;
   font-size: 1.5rem;
@@ -3438,6 +3451,12 @@ footer ul a:visited {
 
 .footer-bottom .copyright span {
   display: inline-block;
+}
+
+footer .footer-contact p,
+footer .press-info h4,
+footer .copyright span {
+  color: var(--civitas-rio-white-80, rgba(255, 255, 255, 0.80));
 }
 
 .footer-bottom .copyright span::after {
