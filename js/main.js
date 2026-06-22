@@ -80,7 +80,7 @@
 	* ------------------------------------------------------ */
 	var ssOwlCarousel = function() {
 			
-		$(".owl-carousel").owlCarousel({	
+		$(".owl-carousel").not(".eixos-carousel").owlCarousel({	
 	      loop: true,
   			nav: false,
 			autoHeight: true,
@@ -89,6 +89,84 @@
 		});
 
 	};  	
+
+
+  /* Eixos Carousel
+	* ------------------------------------------------------ */
+	var ssEixosCarousel = function() {
+
+		var $carousel = $(".eixos-carousel");
+
+		if (!$carousel.length) return;
+
+		$carousel.owlCarousel({
+			loop: false,
+			nav: false,
+			dots: true,
+			mouseDrag: true,
+			touchDrag: true,
+			pullDrag: true,
+			smartSpeed: 450,
+			margin: 72,
+			responsive: {
+				0: {
+					items: 1,
+					margin: 28
+				},
+				700: {
+					items: 2,
+					margin: 40
+				},
+				1024: {
+					items: 3,
+					margin: 72
+				}
+			}
+		});
+
+		var updateEixosNav = function(event) {
+			var item = event.item || {};
+			var visibleItems = event.page ? event.page.size : 1;
+			var currentIndex = item.index || 0;
+			var totalItems = item.count || 0;
+			var isFirst = currentIndex <= 0;
+			var isLast = currentIndex >= totalItems - visibleItems;
+
+			$(".eixos-prev").prop("disabled", isFirst).toggleClass("is-disabled", isFirst);
+			$(".eixos-next").prop("disabled", isLast).toggleClass("is-disabled", isLast);
+		};
+
+		$carousel.on("initialized.owl.carousel changed.owl.carousel refreshed.owl.carousel", updateEixosNav);
+		updateEixosNav({
+			item: {
+				index: 0,
+				count: $carousel.find(".feature").length
+			},
+			page: {
+				size: 3
+			}
+		});
+
+		$(".eixos-prev").on("click", function() {
+			$carousel.trigger("prev.owl.carousel");
+		});
+
+		$(".eixos-next").on("click", function() {
+			$carousel.trigger("next.owl.carousel");
+		});
+
+		$(".eixos-nav-button").on("mouseenter focus", function() {
+			$(".eixos-nav-button").removeClass("is-active");
+			$(this).addClass("is-active");
+		});
+
+		$(".eixos-nav").on("mouseleave", function() {
+			$(".eixos-nav-button").removeClass("is-active");
+			$(".eixos-prev").addClass("is-active");
+		});
+
+		$(".eixos-prev").addClass("is-active");
+	};
 
 
   /* Highlight the current section in the navigation bar
@@ -243,6 +321,7 @@
 		ssMobileMenu();
 		ssFitVids();
 		ssOwlCarousel();
+		ssEixosCarousel();
 		ssWaypoints();
 		ssSmoothScroll();
 		ssPlaceholder();
