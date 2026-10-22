@@ -1486,21 +1486,6 @@ padding-top:150px;
     min-width:20px !important
   }
 
-  .header-logo {
-    left: 20px;
-  }
-  .header-right {
-    right: 120px;
-  }
-
-  .header-lgpd {
-    right: 20px;
-  }
-
-  .header-lgpd img {
-    width: 76px;
-  }
-
 }
 /* ------------------------------------------------------------------- 
  * menu trigger - (_site-layout.css) 
@@ -1714,6 +1699,46 @@ padding-top:150px;
   #header-nav-wrap .cta {
     display: block;
     padding: 0 20px;
+  }
+
+  #header {
+    height: 112px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 56px 56px;
+    align-items: center;
+    justify-items: center;
+    padding: 0 12px;
+  }
+
+  #header .header-logo,
+  #header .header-middle,
+  #header .header-right,
+  #header .header-lgpd {
+    position: static;
+    transform: none;
+  }
+
+  #header .header-logo a {
+    width: 140px;
+    height: 30px;
+    background-size: contain;
+  }
+
+  #header .header-middle a {
+    width: 72px;
+    height: 36px;
+    background-size: contain;
+  }
+
+  #header .header-right a {
+    width: 106px;
+    height: 48px;
+    background-size: contain;
+  }
+
+  #header .header-lgpd img {
+    width: 76px;
   }
 }
 
